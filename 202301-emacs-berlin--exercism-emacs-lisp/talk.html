@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Exercism Emacs Lisp Track</title>
+<meta name="author" content="fap"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="./reveal.js/dist/theme/moon.css" id="theme"/>
+
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Exercism Emacs Lisp Track</h1><p class="subtitle"></p>
+<h2 class="author">fap</h2><h2 class="date">2023-01-25</h2>
+</section>
+
+
+<section>
+<section id="slide-org35e609e">
+<h2 id="org35e609e"><span class="section-number-2">1.</span> Why am I talking about this?</h2>
+<ul>
+<li>Emacs Lisp track maintainer since November 2022</li>
+<li>make Emacs Lisp and Emacs more approachable</li>
+<li>grow the community (Emacs and Exercism)</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgdb220f2">
+<h2 id="orgdb220f2"><span class="section-number-2">2.</span> What is Exercism?</h2>
+
+<div id="org77abaa2" class="figure">
+<p><img src="images/exercism_page_not_logged_in.png" alt="exercism_page_not_logged_in.png" />
+</p>
+</div>
+</section>
+<section id="slide-org591eafd">
+<h3 id="org591eafd"><span class="section-number-3">2.1.</span> Purpose</h3>
+<ul>
+<li>Teach programming languages</li>
+<li>Bring people to basic fluency</li>
+
+</ul>
+</section>
+<section id="slide-org8e3de9a">
+<h3 id="org8e3de9a"><span class="section-number-3">2.2.</span> Definition of fluency</h3>
+<blockquote >
+<p>
+The goal of a language track on Exercism is to give people a way to achieve a high level of fluency at a low level of proficiency.
+</p>
+
+<p>
+We're aiming for fluency in the syntax, idioms, and the standard library of the language.
+</p>
+</blockquote>
+</section>
+<section id="slide-org01ed21b">
+<h3 id="org01ed21b"><span class="section-number-3">2.3.</span> Main Features of Exercism (according to me)</h3>
+<ul>
+<li>Practice exercises</li>
+<li>Mentoring / Feedback</li>
+<li>Syllabus / Concepts / Learning exercises</li>
+<li>Online (codemirror) and offline editing</li>
+<li>Gamification</li>
+
+</ul>
+</section>
+<section id="slide-org74b24bd">
+<h3 id="org74b24bd"><span class="section-number-3">2.4.</span> Exercism</h3>
+<ul>
+<li>First version created in 2013</li>
+<li>Three major versions</li>
+<li>Currently 64 language tracks live</li>
+<li>Over 12.000 contributors (all repos)</li>
+
+</ul>
+</section>
+<section id="slide-org57e91b9">
+<h3 id="org57e91b9"><span class="section-number-3">2.5.</span> Structure</h3>
+<ul>
+<li>Not-for-profit organization registered in the UK</li>
+<li>Some people paid by the organization</li>
+<li>Most contributors are volunteers</li>
+<li>Content repos: MIT license</li>
+<li>Code repos: AGPL-3.0</li>
+
+</ul>
+</section>
+<section id="slide-org0d9e665">
+<h3 id="org0d9e665"><span class="section-number-3">2.6.</span> Awesome community</h3>
+<ol>
+<li>Slack</li>
+<li>Discourse Forum</li>
+<li>Youtube Channel</li>
+<li>Featured community videos</li>
+<li>Podcast</li>
+<li>Twitch</li>
+<li>Regular team meeting</li>
+
+</ol>
+</section>
+</section>
+<section>
+<section id="slide-orgda07761">
+<h2 id="orgda07761"><span class="section-number-2">3.</span> Contributing</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+</section>
+<section id="slide-org99e75ed">
+<h3 id="org99e75ed"><span class="section-number-3">3.1.</span> Mentoring</h3>
+
+<div id="org5cf54bf" class="figure">
+<p><img src="images/mentoring_docs.png" alt="mentoring_docs.png" />
+</p>
+</div>
+<ul>
+<li><a href="https://exercism.org/docs/mentoring">https://exercism.org/docs/mentoring</a></li>
+
+</ul>
+</section>
+<section id="slide-org99440d4">
+<h3 id="org99440d4"><span class="section-number-3">3.2.</span> Practice Exercises</h3>
+<ul>
+<li><a href="https://github.com/exercism/problem-specifications/">129 problem specifications</a></li>
+<li>if applicable, can be implemented for each language track</li>
+
+</ul>
+</section>
+<section id="slide-org33c24d0">
+<h3 id="org33c24d0"><span class="section-number-3">3.3.</span> Scaffolding tool for problem specifications</h3>
+<ul>
+<li>Reads json problem specification</li>
+<li>Creates test file</li>
+<li>Often needs exercise specific code</li>
+
+</ul>
+</section>
+<section id="slide-orgfdb6709">
+<h3 id="orgfdb6709"><span class="section-number-3">3.4.</span> Syllabus</h3>
+<ul>
+<li>Concepts</li>
+<li>Learning Exercises</li>
+
+</ul>
+</section>
+<section id="slide-orgbbce1bc">
+<h3 id="orgbbce1bc"><span class="section-number-3">3.5.</span> Syllabus</h3>
+
+<div id="org15a2fbc" class="figure">
+<p><img src="images/syllabus_common_lisp.png" alt="syllabus_common_lisp.png" />
+</p>
+</div>
+</section>
+<section id="slide-orgefd4873">
+<h3 id="orgefd4873"><span class="section-number-3">3.6.</span> Problems with mentoring</h3>
+<ul>
+<li>gets boring to give the same feedback over and over</li>
+<li>humans don't scale well</li>
+<li>mentors might not be available</li>
+
+</ul>
+</section>
+<section id="slide-org75723f2">
+<h3 id="org75723f2"><span class="section-number-3">3.7.</span> Analyzer</h3>
+<ul>
+<li>Automated feedback on naming, casing, formatting, idiomatic rules &#x2026;</li>
+<li>Only if there is an official or de facto standard for the language</li>
+<li>Check if a certain package gets used</li>
+<li>Linters, syntax tree analysis, &#x2026;</li>
+
+</ul>
+</section>
+<section id="slide-orgaa46a88">
+<h3 id="orgaa46a88"><span class="section-number-3">3.8.</span> Representer</h3>
+<ul>
+<li>Only mentor a particular solution once</li>
+<li>Normalize to find unique solution
+<ul>
+<li>normalize formatting</li>
+<li>remove comments</li>
+<li>replace identifiers with placeholders</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-orgc0027c2">
+<h3 id="orgc0027c2"><span class="section-number-3">3.9.</span> Representer</h3>
+<ul>
+<li>Example Process
+<ul>
+<li>Parse the solution's code into an Abstract Syntax Tree (AST)</li>
+<li>Apply normalizations to the AST</li>
+<li>Convert the normalized AST to a string</li>
+<li>Write the normalized AST string to a file
+<ul>
+<li>can be an AST representation or language code</li>
+
+</ul></li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-orgd0415e4">
+<h3 id="orgd0415e4"><span class="section-number-3">3.10.</span> Representer</h3>
+<ul>
+<li>Super mentors (more than 100 mentorship sessions on the track) can create automated feedback</li>
+<li>Detect if a solution matches a known normalized solution and give automated feedback</li>
+
+</ul>
+</section>
+<section id="slide-orgfbc555e">
+<h3 id="orgfbc555e"><span class="section-number-3">3.11.</span> Test Runner</h3>
+<ul>
+<li>Runs tests in a Docker container</li>
+<li>Captures full stdout of test run, so online editor users can use print debugging</li>
+<li>Reports test results</li>
+
+</ul>
+</section>
+<section id="slide-org2b5ad63">
+<h3 id="org2b5ad63"><span class="section-number-3">3.12.</span> Articles</h3>
+<ul>
+<li>Present and explain different ways to solve an exercise</li>
+<li>One solution per article</li>
+
+</ul>
+</section>
+<section id="slide-org461533d">
+<h3 id="org461533d"><span class="section-number-3">3.13.</span> Documentation</h3>
+
+<div id="orgd58aa86" class="figure">
+<p><img src="images/emacs_lisp_docs.png" alt="emacs_lisp_docs.png" />
+</p>
+</div>
+</section>
+<section id="slide-org2b8ac9f">
+<h3 id="org2b8ac9f"><span class="section-number-3">3.14.</span> Snippet Extractor</h3>
+
+<div id="orgdda3d05" class="figure">
+<p><img src="images/snippets.png" alt="snippets.png" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org7ea4f07">
+<h2 id="org7ea4f07"><span class="section-number-2">4.</span> Emacs Lisp track</h2>
+<ul>
+<li>First commit 2015</li>
+
+</ul>
+</section>
+<section id="slide-orgb4e1f69">
+<h3 id="orgb4e1f69"><span class="section-number-3">4.1.</span> Stats</h3>
+<p>
+<img src="images/emacs_lisp_track_stats.png" alt="emacs_lisp_track_stats.png" />
+<img src="images/emacs_lisp_contributors_stats.png" alt="emacs_lisp_contributors_stats.png" />
+</p>
+</section>
+<section id="slide-org8f00971">
+<h3 id="org8f00971"><span class="section-number-3">4.2.</span> A look at the list-ops exercise</h3>
+<pre  class="example" >
+list-ops
+├── .docs
+│   ├── hints.md
+│   ├── instructions.append.md
+│   └── instructions.md
+├── list-ops.el
+├── list-ops-test.el
+└── .meta
+    ├── config.json
+    ├── example.el
+    └── tests.toml
+</pre>
+</section>
+<section id="slide-org1758748">
+<h3 id="org1758748"><span class="section-number-3">4.3.</span> A look at the list-ops exercise</h3>
+
+<div id="org6907255" class="figure">
+<p><img src="images/list-ops-instructions.png" alt="list-ops-instructions.png" />
+</p>
+</div>
+</section>
+<section id="slide-org0d292cb">
+<h3 id="org0d292cb"><span class="section-number-3">4.4.</span> A look at the list-ops exercise</h3>
+
+<div id="org75b1046" class="figure">
+<p><img src="images/list-ops.el.png" alt="list-ops.el.png" />
+</p>
+</div>
+</section>
+<section id="slide-org68cbbdd">
+<h3 id="org68cbbdd"><span class="section-number-3">4.5.</span> A look at the list-ops exercise</h3>
+
+<div id="org3986c75" class="figure">
+<p><img src="images/list-ops-test.el.png" alt="list-ops-test.el.png" />
+</p>
+</div>
+</section>
+<section id="slide-org8945a89">
+<h3 id="org8945a89"><span class="section-number-3">4.6.</span> Asking for mentorship</h3>
+<ul>
+<li>What are you hoping to learn from this track?
+<ul>
+<li>Programming background</li>
+<li>Learning goal</li>
+
+</ul></li>
+<li>How can a mentor help you with this solution?
+<ul>
+<li>Specific to this exercise / solution iteraion</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-org4afd05d">
+<h3 id="org4afd05d"><span class="section-number-3">4.7.</span> Common topics on the Emacs Lisp track</h3>
+<ul>
+<li>Global variables / variable scoping</li>
+<li>Missing functions (require)</li>
+<li>Quoting / backquote</li>
+<li>Sequences</li>
+<li>Style guide / coding conventions</li>
+<li>Library headers</li>
+<li>Tail call optimization</li>
+<li>Threading macro</li>
+
+</ul>
+</section>
+<section id="slide-org8d0759e">
+<h3 id="org8d0759e"><span class="section-number-3">4.8.</span> What to work on next?</h3>
+<ul>
+<li>Syllabus</li>
+<li>Analyzer</li>
+<li>Representer</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc72e22a">
+<h2 id="orgc72e22a"><span class="section-number-2">5.</span> Emacs integrations</h2>
+<ol>
+<li><a href="https://github.com/anonimitoraf/exercism.el">https://github.com/anonimitoraf/exercism.el</a> (using myself)</li>
+<li><a href="https://github.com/elken/exercism-modern">https://github.com/elken/exercism-modern</a> (not on melpa)</li>
+
+</ol>
+</section>
+</section>
+<section>
+<section id="slide-orgaf065c1">
+<h2 id="orgaf065c1"><span class="section-number-2">6.</span> Q&amp;A</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgd89e75e">
+<h2 id="orgd89e75e"><span class="section-number-2">7.</span> Reach out</h2>
+<ul>
+<li>@fap:matrix.org (#emacs:matrix.org, #org-mode:matrix.org)</li>
+<li>fap@mastodon.social</li>
+<li>@fapsays @ twitter</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="./reveal.js/dist/reveal.js"></script>
+<script src="./reveal.js/plugin/markdown/markdown.js"></script>
+<script src="./reveal.js/plugin/zoom/zoom.js"></script>
+<script src="./reveal.js/plugin/notes/notes.js"></script>
+
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+plugins: [RevealMarkdown, RevealZoom, RevealNotes],
+transition:'none'
+});
+
+</script>
+</body>
+</html>

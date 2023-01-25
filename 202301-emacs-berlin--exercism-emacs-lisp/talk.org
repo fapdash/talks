@@ -1,0 +1,157 @@
+:REVEAL_PROPERTIES:
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_THEME: moon
+#+REVEAL_INIT_OPTIONS: transition:'none'
+:END:
+
+#+TITLE: Exercism Emacs Lisp Track
+#+SUBTITLE:
+#+AUTHOR: fap
+#+DATE: 2023-01-25
+#+OPTIONS: toc:nil timestamp:nil
+
+* Why am I talking about this?
+- Emacs Lisp track maintainer since November 2022
+- make Emacs Lisp and Emacs more approachable
+- grow the community (Emacs and Exercism)
+* What is Exercism?
+[[file:images/exercism_page_not_logged_in.png]]
+** Purpose
+- Teach programming languages
+- Bring people to basic fluency
+** Definition of fluency
+        #+begin_quote
+The goal of a language track on Exercism is to give people a way to achieve a high level of fluency at a low level of proficiency.
+
+We're aiming for fluency in the syntax, idioms, and the standard library of the language.
+        #+end_quote
+** Main Features of Exercism (according to me)
+   - Practice exercises
+   - Mentoring / Feedback
+   - Syllabus / Concepts / Learning exercises
+   - Online (codemirror) and offline editing
+   - Gamification
+** Exercism
+- First version created in 2013
+- Three major versions
+- Currently 64 language tracks live
+- Over 12.000 contributors (all repos)
+** Structure
+- Not-for-profit organization registered in the UK
+- Some people paid by the organization
+- Most contributors are volunteers
+- Content repos: MIT license
+- Code repos: AGPL-3.0
+** Awesome community
+      1. Slack
+      2. Discourse Forum
+      3. Youtube Channel
+      4. Featured community videos
+      5. Podcast
+      6. Twitch
+      7. Regular team meeting
+* Contributing
+** Mentoring
+[[file:images/mentoring_docs.png]]
+- https://exercism.org/docs/mentoring
+** Practice Exercises
+     - [[https://github.com/exercism/problem-specifications/][129 problem specifications]]
+     - if applicable, can be implemented for each language track
+** Scaffolding tool for problem specifications
+     - Reads json problem specification
+     - Creates test file
+     - Often needs exercise specific code
+** Syllabus
+     - Concepts
+     - Learning Exercises
+** Syllabus
+[[file:images/syllabus_common_lisp.png]]
+** Problems with mentoring
+- gets boring to give the same feedback over and over
+- humans don't scale well
+- mentors might not be available
+** Analyzer
+     - Automated feedback on naming, casing, formatting, idiomatic rules ...
+     - Only if there is an official or de facto standard for the language
+     - Check if a certain package gets used
+     - Linters, syntax tree analysis, ...
+** Representer
+     - Only mentor a particular solution once
+     - Normalize to find unique solution
+       - normalize formatting
+       - remove comments
+       - replace identifiers with placeholders
+** Representer
+     - Example Process
+       - Parse the solution's code into an Abstract Syntax Tree (AST)
+       - Apply normalizations to the AST
+       - Convert the normalized AST to a string
+       - Write the normalized AST string to a file
+         - can be an AST representation or language code
+** Representer
+     - Super mentors (more than 100 mentorship sessions on the track) can create automated feedback
+     - Detect if a solution matches a known normalized solution and give automated feedback
+** Test Runner
+     - Runs tests in a Docker container
+     - Captures full stdout of test run, so online editor users can use print debugging
+     - Reports test results
+** Articles
+     - Present and explain different ways to solve an exercise
+     - One solution per article
+** Documentation
+[[file:images/emacs_lisp_docs.png]]
+** Snippet Extractor
+[[file:images/snippets.png]]
+* Emacs Lisp track
+- First commit 2015
+** Stats
+[[file:images/emacs_lisp_track_stats.png]]
+[[file:images/emacs_lisp_contributors_stats.png]]
+** A look at the list-ops exercise
+#+begin_src
+list-ops
+├── .docs
+│   ├── hints.md
+│   ├── instructions.append.md
+│   └── instructions.md
+├── list-ops.el
+├── list-ops-test.el
+└── .meta
+    ├── config.json
+    ├── example.el
+    └── tests.toml
+#+end_src
+** A look at the list-ops exercise
+[[file:images/list-ops-instructions.png]]
+** A look at the list-ops exercise
+[[file:images/list-ops.el.png]]
+** A look at the list-ops exercise
+[[file:images/list-ops-test.el.png]]
+** Asking for mentorship
+- What are you hoping to learn from this track?
+  - Programming background
+  - Learning goal
+- How can a mentor help you with this solution?
+  - Specific to this exercise / solution iteraion
+** Common topics on the Emacs Lisp track
+- Global variables / variable scoping
+- Missing functions (require)
+- Quoting / backquote
+- Sequences
+- Style guide / coding conventions
+- Library headers
+- Tail call optimization
+- Threading macro
+** What to work on next?
+- Syllabus
+- Analyzer
+- Representer
+
+* Emacs integrations
+   1. https://github.com/anonimitoraf/exercism.el (using myself)
+   2. https://github.com/elken/exercism-modern (not on melpa)
+* Q&A
+* Reach out
+- @fap:matrix.org (#emacs:matrix.org, #org-mode:matrix.org)
+- fap@mastodon.social
+- @fapsays @ twitter
