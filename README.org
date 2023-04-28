@@ -1,0 +1,8 @@
+* Workshops
+- 2019-12-29 Kritische Männlichkeit - Männlichkeitsbilder und Patriarchat (with @hng, German)
+  - Slides: https://github.com/hng/talk-kritische-maennlichkeit
+
+* Talks
+- 2023-01-25 Exercism Emacs Lisp Track @ Emacs Berlin Meetup
+  - Slides: https://github.com/fapdash/talks/tree/master/202301-emacs-berlin--exercism-emacs-lisp
+  - Recording: https://diode.zone/w/3BAYuTxu2uME9iMSK54crk
